@@ -29,3 +29,4 @@
 5. Design Elevator
 6. Apply coupon on Shopping Cart
 7. LRU and LFU cache
+8. Vending Machine
