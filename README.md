@@ -28,5 +28,5 @@
 4. ATM
 5. Design Elevator
 6. Apply coupon on Shopping Cart
-7. LRU and LFU cache
-8. Vending Machine
+7. LRU cache
+8. LFU cache
