@@ -30,3 +30,8 @@
 6. Apply coupon on Shopping Cart
 7. LRU cache
 8. LFU cache
+
+### Pro tips
+1. Use **synchronized** keyword whenever doing CRUD operation for thread safety.
+2. Can use **ConcurrentHashmap** for ensuring thread safety.
+3. Make System class **Singleton** for insuring single instance.
