@@ -16,3 +16,27 @@ Lets say there are two persons and only one person can access the room at once. 
 2. In **synchronized** locks acquired and release automatically while in **ReentrantLock** it would be done manually.
 3. In **synchronized** threads could wait for indefinite time while in **ReentrantLock** we can set timeout if thread doesn't get acruired then it will move forward and skip the critical section.
 4. In **synchronized** locks newer threads may acquire lock first (no fairness garaunteed)
+
+### Implementation
+
+#### 1. synchronized
+```java
+synchronized(lock) {
+    counter++;
+}
+```
+
+#### 2. ReentrantLock
+```java
+private final ReentrantLock lock = new ReentrantLock();
+
+public void withdraw(int amount) {
+    lock.lock(); // manually lock
+
+    try {
+        balance -= amount;
+    } finally {
+        lock.unlock(); // manually unlock
+    }
+}
+```
