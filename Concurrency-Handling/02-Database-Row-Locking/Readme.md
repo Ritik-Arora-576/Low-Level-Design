@@ -1,7 +1,7 @@
 ## Database Row Locking
 Database row locking is a way to ensure that only one transaction can modify a specific row at a time, even when requests come from multiple application servers.<br>
 
-Lets say there is movie booking application which is running on multiple servers and there is one seat left for a show and multiple transaction(i.e booking requests) coming from different application servers. In this case, first transaction will lock that row which has a vacant seat and other transactions must wait to update the row until the first transaction is completed.
+Lets say there is movie booking application which is running on multiple servers and there is one seat left for a show and multiple transaction(i.e booking requests) coming from different application servers which is targetting same database. In this case, first transaction will lock that row which has a vacant seat and other transactions must wait to update the row until the first transaction is completed.
 
 It is generally use in movie booking system, banking systems, inventory updates etc.
 
