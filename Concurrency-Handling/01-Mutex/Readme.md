@@ -2,7 +2,7 @@
 Mutex (mutual exclusion) is used when multiple threads are trying to access/update the same resource and you want only one thread to enter within a critical section.
 
 Most common mutex mechanisms are:<br>
-**1. synchronized** 
+**1. synchronized** <br>
 **2. ReentrantLock** 
 
 ### When to use?
