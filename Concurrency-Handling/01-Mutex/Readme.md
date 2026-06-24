@@ -12,7 +12,7 @@ When multiple threads are trying to access same resource within a single server 
 Lets say there are two persons and only one person can access the room at once. If one person enters into the room then other person must wait until the person which is inside the room left.
 
 ### synchronized vs ReentrantLock
-1. **synchronized** is simpler to implement as compare to **ReentrantLock**
+1. **synchronized** is simpler to implement as compare to **ReentrantLock** (80-90% times we use synchronized for simplifying the implementation)
 2. In **synchronized** locks acquired and release automatically while in **ReentrantLock** it would be done manually.
 3. In **synchronized** threads could wait for indefinite time while in **ReentrantLock** we can set timeout if thread doesn't get acruired then it will move forward and skip the critical section.
 4. In **synchronized** locks newer threads may acquire lock first (no fairness garaunteed)
