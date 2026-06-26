@@ -9,6 +9,7 @@ Lets say an external API can process 20 requests/minute then if 100 requests com
 
 ### Real life analogy
 Lets say there is a restaurent which has maximum sitting capacity of 20 people. If 50 people came together then restaurent staff can allow 20 people at a time while other 30 people needs to wait. When tables got empty after few people done with the eating then waiting people will get the sitting in restaurent based on the avaialblity.<br>
+
 **People:** Threads <br>
 **Restaurent:** Resource <br>
 **Restaurent Staff:** Semaphore (who is allocating and make people wait) <br>
