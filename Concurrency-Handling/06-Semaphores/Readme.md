@@ -17,7 +17,11 @@ Lets say there is a restaurent which has maximum sitting capacity of 20 people. 
 // maximum 10 connections
 Semaphore semaphore = new Semaphore(10);
 
+// Decrements the counter. (Wait)
+// If the counter becomes negative (or is zero, depending on implementation), the thread blocks until another thread releases the semaphore.
 semaphore.acquire(); // Atomically checks and decrements
-// Access resource
+
+// Increments the counter. (Signal)
+// If any threads are waiting, one of them is awakened.
 semaphore.release(); // Atomically increments and wakes a waiting thread
 ```
