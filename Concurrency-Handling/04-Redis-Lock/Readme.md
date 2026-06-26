@@ -7,3 +7,6 @@ It is generally use by movie booking application where application is running on
 **Mutex (synchronized/ReentrantLock):** One key inside one house (JVM).<br>
 **Redis Lock:** One key shared by the entire neighborhood (all application servers).<br>
 **Database Row Lock:** The database itself locks the record so no other transaction can modify it until the current transaction finishes.<br>
+
+#### Why Redis is so fast?
+Redis is so fast because it is in-memory database and due to its single thread it makes eliminate synchronization time (context switching among multiple threads), avoid overhead of locks and executes commands squentially.
