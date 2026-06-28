@@ -35,4 +35,27 @@
 1. Use **synchronized** keyword whenever doing CRUD operation for thread safety.
 2. Can use **ConcurrentHashmap** for ensuring thread safety.
 3. Make System class **Singleton** for insuring single instance.
-4. **Volatile:** If a thread writes to a volatile variable, any other thread that subsequently reads that variable is guaranteed to see the latest written value, not a stale cached value. We can use this keyword for a field where we want to make sure about the latest value. When the variable is readed frequently but updated infrequently then we use Volatile keyword for the field.
+4. **Volatile:** If a thread writes to a volatile variable, any other thread that subsequently reads that variable is guaranteed to see the latest written value, not a stale cached value. We can use this keyword for a field where we want to make sure about the latest value. When the variable is readed frequently but updated infrequently then we use Volatile keyword for the field.<br>
+
+We can use it for **isRunning** field in Elevator system<br>
+```java
+class Elevator implements Runnable {
+
+    private volatile boolean isRunning = true;
+
+    // run by thread-1
+    @Override
+    public void run() {
+        while (isRunning) {
+            move();
+        }
+    }
+
+    // run by thread-2
+    // if this executes then thread-1 immediately got to know that the value is updated to false which makes run function stops
+    public void stop() {
+        isRunning = false;
+    }
+}
+```
+
