@@ -35,4 +35,4 @@
 1. Use **synchronized** keyword whenever doing CRUD operation for thread safety.
 2. Can use **ConcurrentHashmap** for ensuring thread safety.
 3. Make System class **Singleton** for insuring single instance.
-4. **Volatile:** If a thread writes to a volatile variable, any other thread that subsequently reads that variable is guaranteed to see the latest written value, not a stale cached value. We can use this keyword for a field where we want to make sure about the latest value.
+4. **Volatile:** If a thread writes to a volatile variable, any other thread that subsequently reads that variable is guaranteed to see the latest written value, not a stale cached value. We can use this keyword for a field where we want to make sure about the latest value. When the variable is readed frequently but updated infrequently then we use Volatile keyword for the field.
