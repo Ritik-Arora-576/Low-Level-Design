@@ -52,7 +52,8 @@ class Elevator implements Runnable {
     }
 
     // run by thread-2
-    // if this executes then thread-1 immediately got to know that the value is updated to false which makes run function stops
+    /* if this executes then thread-1 immediately got to know that the
+    value is updated to false which makes run function stops */
     public void stop() {
         isRunning = false;
     }
