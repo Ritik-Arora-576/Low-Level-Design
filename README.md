@@ -69,7 +69,7 @@ if (isAvailable) {
 }
 ```
 
-If two threads try to access this section of code then it may reserves the same slot instead we can use **synchroized** for thread-safety but it has overhead and inefficient way. Instead we use **Atomic class** which is thread safe and also light weight.<br>
+If two threads try to access this section of code then it may reserves the same slot instead we can use **synchroized** for thread-safety but it has overhead and inefficient way. Instead we use **Atomic class** which is thread safe and also light weighted.<br>
 
 ```java
 AtmoicBooelan isAvailable = new AtomicBoolean(true);
