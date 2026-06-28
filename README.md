@@ -60,3 +60,18 @@ class Elevator implements Runnable {
 }
 ```
 
+5. **Atomic:** for increament/decrement operation or field update operation using synchronized would be heavy operation instead we use atomic classes to make it light weight and more efficient.<br>
+
+**Without thread-safety to update isAvailale in Parking lot system**
+```java
+if (isAvailable) {
+    isAvailable = false;
+}
+```
+
+If two threads try to access this section of code then it may reserves the same slot instead we can use **synchroized** for thread-safety but it has overhead and inefficient way. Instead we use **Atomic class** which is thread safe and also light weight.<br>
+
+```java
+AtmoicBooelan isAvailable = new AtomicBoolean(true);
+isAvailable.compareAndSet(true, false);
+```
