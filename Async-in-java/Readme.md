@@ -312,5 +312,7 @@ Retrieve result or chain next tasks
 
 ## Real Life Analogy
 Imagine you're at a restaurant. The **ExecutorService** is like the kitchen manager who manages a fixed number of chefs (worker threads). When customers place orders (tasks), the manager assigns them to available chefs. If all chefs are busy, new orders wait in a queue until a chef becomes free. <br>
+
 When you place an order, you're given an order token, which represents a **Future**. You can leave the restaurant and do other work while your food is being prepared asynchronously. Later, when you return and present the token (`future.get()`), if the food is ready, you receive it immediately; otherwise, you must wait at the counter until it's ready. This waiting is equivalent to the blocking behavior of `Future.get()`. <br>
+
 Now imagine instead of returning to the restaurant after every step, you hire a personal assistant and give them a complete workflow: "Collect my food, then pick up my laundry, then pay my electricity bill, and if anything goes wrong, inform me." The assistant performs each task automatically in the correct order while you continue with your own work without interruption. This is how **CompletableFuture** works—it lets you define an entire asynchronous workflow that executes automatically, eliminating the need to manually wait (`get()`) after every task.
