@@ -75,3 +75,17 @@ If two threads try to access this section of code then it may reserves the same 
 AtmoicBooelan isAvailable = new AtomicBoolean(true);
 isAvailable.compareAndSet(true, false);
 ```
+
+### Stream APIs
+```java
+List<String> names = List.of("Aman", "Ritik", "Ayush", "Ravi");
+
+List<String> result = names.stream().filter(name -> name.startsWith("A")).map(name -> name.toUpperCase()).limit(2).skip(1)
+                .toList();
+
+result.forEach(name -> System.out.println(name));
+
+System.out.println("Length of stream result:" + result.stream().count());
+
+System.out.println(result);
+```
