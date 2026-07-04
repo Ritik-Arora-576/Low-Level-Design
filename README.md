@@ -77,6 +77,8 @@ isAvailable.compareAndSet(true, false);
 ```
 
 ### Stream APIs
+Stream APIs are related to collection framework which introduce in Java8 version. It is used to process bulk operation which helps reduce the code length which makes the code more readable.
+
 ```java
 List<String> names = List.of("Aman", "Ritik", "Ayush", "Ravi");
 
