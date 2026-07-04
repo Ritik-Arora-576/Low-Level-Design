@@ -82,8 +82,12 @@ Stream APIs are related to collection framework which introduce in Java8 version
 ```java
 List<String> names = List.of("Aman", "Ritik", "Ayush", "Ravi");
 
-List<String> result = names.stream().filter(name -> name.startsWith("A")).map(name -> name.toUpperCase()).limit(2).skip(1)
-                .toList();
+List<String> result = names.stream()
+                           .filter(name -> name.startsWith("A"))
+                           .map(name -> name.toUpperCase())
+                           .limit(2)
+                           .skip(1)
+                           .toList();
 
 result.forEach(name -> System.out.println(name));
 
